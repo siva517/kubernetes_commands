@@ -1,0 +1,2 @@
+#switch to use a different cluster
+CMD: kubectl config use-context clusterName
