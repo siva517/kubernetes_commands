@@ -16,3 +16,6 @@ kubectl get nodes -o wide
 
 View the detail for one of the externally-facing nodes using the name from the output of the previous command.
 kubectl describe node <NODE NAME>
+
+#Pod details
+kubectl describe pod. 
