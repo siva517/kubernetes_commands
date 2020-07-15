@@ -1,5 +1,18 @@
 #switch to use a different cluster
 CMD: kubectl config use-context clusterName
 
-Manually Scala deployments:
+#Manually Scala deployments:
 CMD: kubectl scale --replicas=1 deployments/azure-vote-front
+
+Cluster
+View the basic cluster information.
+kubectl cluster-info
+
+Nodes
+View all of the nodes currently in the cluster.
+kubectl get nodes
+Use the wide output format option to view more information for each node.
+kubectl get nodes -o wide
+
+View the detail for one of the externally-facing nodes using the name from the output of the previous command.
+kubectl describe node <NODE NAME>
