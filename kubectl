@@ -28,3 +28,7 @@ Let’s execute an echo command within the pod.
 kubectl exec nginx -- /bin/echo "Hello from CoreOS"
 Execute an interactive shell session inside the container.
 kubectl exec -it nginx -- /bin/sh
+
+
+Notice the label that automatically gets set on a pod that is created with kubectl run
+kubectl get pods --show-labels
