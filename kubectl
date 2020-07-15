@@ -19,3 +19,12 @@ kubectl describe node <NODE NAME>
 
 #Pod details
 kubectl describe pod. 
+
+View the running processses inside the nginx pod.
+kubectl exec nginx -- find /proc -mindepth 2 -maxdepth 2 -name exe -exec ls -lh {} \; 2>/dev/null
+View the ip address of the running pod.
+kubectl exec nginx -- hostname -i
+Let’s execute an echo command within the pod.
+kubectl exec nginx -- /bin/echo "Hello from CoreOS"
+Execute an interactive shell session inside the container.
+kubectl exec -it nginx -- /bin/sh
