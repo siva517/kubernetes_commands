@@ -46,3 +46,5 @@ kubectl scale replicaset myfirstreplicaset --replicas=6
 #import image from docker to acr
 az acr import   --name sthumati   --source docker.io/library/nginx:latest   --image nginx:latest
 
+#diff b/n replica set and replication contorller
+https://stackoverflow.com/questions/36220388/what-is-the-difference-between-replicaset-and-replicationcontroller
