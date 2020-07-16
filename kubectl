@@ -32,3 +32,17 @@ kubectl exec -it nginx -- /bin/sh
 
 Notice the label that automatically gets set on a pod that is created with kubectl run
 kubectl get pods --show-labels
+
+
+#Attaching ACR to AKR
+az aks update -g siva -n myAks --attach-acr sthumati
+acr login server can be found from portal registry
+
+
+kubectl describe replicaset myfirstreplicaset
+kubectl scale replicaset myfirstreplicaset --replicas=6
+
+
+#import image from docker to acr
+az acr import   --name sthumati   --source docker.io/library/nginx:latest   --image nginx:latest
+
